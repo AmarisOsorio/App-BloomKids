@@ -5,6 +5,30 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".splashScreen">
+    tools:context=".splashScreen"
+    android:background="@drawable/fondo_splashscreen">
 
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="218dp"
+        android:layout_height="170dp"
+        android:layout_marginStart="115dp"
+        android:layout_marginTop="300dp"
+        android:layout_marginEnd="115dp"
+        android:layout_marginBottom="300dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/iconhbcut" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="198dp"
+        android:layout_height="51dp"
+        android:fontFamily="@font/baloo"
+        android:text="BloomKids"
+        android:textSize="38dp"
+        tools:layout_editor_absoluteX="106dp"
+        tools:layout_editor_absoluteY="451dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
