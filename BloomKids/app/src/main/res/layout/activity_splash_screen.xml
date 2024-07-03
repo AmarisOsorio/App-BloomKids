@@ -13,11 +13,10 @@
         android:layout_width="218dp"
         android:layout_height="170dp"
         android:layout_marginStart="115dp"
-        android:layout_marginTop="300dp"
+        android:layout_marginTop="260dp"
         android:layout_marginEnd="115dp"
-        android:layout_marginBottom="300dp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.513"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/iconhbcut" />
@@ -26,9 +25,43 @@
         android:id="@+id/textView"
         android:layout_width="198dp"
         android:layout_height="51dp"
+        android:layout_marginStart="107dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="107dp"
+        android:layout_marginBottom="229dp"
         android:fontFamily="@font/baloo"
         android:text="BloomKids"
+        android:textAlignment="center"
         android:textSize="38dp"
-        tools:layout_editor_absoluteX="106dp"
-        tools:layout_editor_absoluteY="451dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2"
+        app:layout_constraintVertical_bias="0.142" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="117dp"
+        android:layout_marginEnd="117dp"
+        android:layout_marginBottom="8dp"
+        android:text="From"
+        app:layout_constraintBottom_toTopOf="@+id/textView3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="117dp"
+        android:layout_marginEnd="117dp"
+        android:layout_marginBottom="24dp"
+        android:text="2do desarrollo de Software"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.428"
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
