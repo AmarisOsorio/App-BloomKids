@@ -1,6 +1,10 @@
 package bryan.amaris.bloomkids
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
+import android.widget.ImageView
+import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -15,6 +19,22 @@ class bienvenida : AppCompatActivity() {
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
+        }
+
+        val btncmAcceder = findViewById<Button>(R.id.btn_cmAcceder)
+        val txtcrear = findViewById<TextView>(R.id.txtcmCrearCuenta)
+        val imgcrearcuenta = findViewById<ImageView>(R.id.imgFlecha)
+
+        btncmAcceder.setOnClickListener(){
+            startActivity(Intent(this,crearCuenta::class.java))
+        }
+
+        txtcrear.setOnClickListener(){
+            startActivity(Intent(this,registro::class.java))
+        }
+
+        imgcrearcuenta.setOnClickListener(){
+            startActivity(Intent(this,registro::class.java))
         }
     }
 }

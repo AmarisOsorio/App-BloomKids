@@ -86,7 +86,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView8"
+        android:id="@+id/imgAtrasCC"
         android:layout_width="45dp"
         android:layout_height="51dp"
         android:layout_marginTop="16dp"

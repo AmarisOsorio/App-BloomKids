@@ -16,7 +16,7 @@
             android:name=".registro"
             android:exported="false">
         </activity>
-        
+
         <activity
             android:name=".crearCuenta"
             android:exported="false">
