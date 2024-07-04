@@ -3,17 +3,17 @@
 
     <item
         android:id="@+id/navigation_home"
-        android:icon="@drawable/iconDoctorB"
+        android:icon="@drawable/icondctorb"
         android:title="Doctores" />
 
     <item
         android:id="@+id/navigation_dashboard"
-        android:icon="@drawable/icListadoB"
+        android:icon="@drawable/iclistadob"
         android:title="Pacientes" />
 
     <item
         android:id="@+id/navigation_notifications"
-        android:icon="@drawable/icBotiquinB"
+        android:icon="@drawable/icbotiquinb"
         android:title="Botíquin" />
 
 </menu>
