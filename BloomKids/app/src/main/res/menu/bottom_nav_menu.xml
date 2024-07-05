@@ -2,18 +2,24 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/navigation_home"
+        android:id="@+id/enfermedades"
         android:icon="@drawable/icondctorb"
-        android:title="Doctores" />
+        android:title="Enfermedades" />
 
     <item
-        android:id="@+id/navigation_dashboard"
+        android:id="@+id/pacientes"
         android:icon="@drawable/iclistadob"
         android:title="Pacientes" />
 
     <item
-        android:id="@+id/navigation_notifications"
+        android:id="@+id/medicamentos"
         android:icon="@drawable/icbotiquinb"
         android:title="Botíquin" />
+
+    <item
+        android:id="@+id/habitacion"
+        android:icon="@drawable/icbotiquinb"
+        android:title="Habitaciones" />
+
 
 </menu>

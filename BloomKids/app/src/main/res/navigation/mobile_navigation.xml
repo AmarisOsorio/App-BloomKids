@@ -3,23 +3,25 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/navigation_home">
-
+    app:startDestination="@id/enfermedades">
     <fragment
-        android:id="@+id/navigation_home"
-        android:name="bryan.amaris.bloomkids.ui.home.HomeFragment"
-        android:label="@string/title_home"
-        tools:layout="@layout/fragment_home" />
-
+        android:id="@+id/enfermedades"
+        android:name="bryan.amaris.bloomkids.enfermedades"
+        android:label="fragment_enfermedades"
+        tools:layout="@layout/fragment_enfermedades" />
     <fragment
-        android:id="@+id/navigation_dashboard"
-        android:name="bryan.amaris.bloomkids.ui.dashboard.DashboardFragment"
-        android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_dashboard" />
-
+        android:id="@+id/habitacion"
+        android:name="bryan.amaris.bloomkids.habitacion"
+        android:label="fragment_habitacion"
+        tools:layout="@layout/fragment_habitacion" />
     <fragment
-        android:id="@+id/navigation_notifications"
-        android:name="bryan.amaris.bloomkids.ui.notifications.NotificationsFragment"
-        android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_notifications" />
+        android:id="@+id/pacientes"
+        android:name="bryan.amaris.bloomkids.Pacientes"
+        android:label="fragment_pacientes"
+        tools:layout="@layout/fragment_pacientes" />
+    <fragment
+        android:id="@+id/medicamentos2"
+        android:name="bryan.amaris.bloomkids.Medicamentos"
+        android:label="fragment_medicamentos"
+        tools:layout="@layout/fragment_medicamentos" />
 </navigation>

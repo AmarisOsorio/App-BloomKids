@@ -9,6 +9,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.navigation.Navigation
 
 class bienvenida : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -25,8 +26,9 @@ class bienvenida : AppCompatActivity() {
         val txtcrear = findViewById<TextView>(R.id.txtcmCrearCuenta)
         val imgcrearcuenta = findViewById<ImageView>(R.id.imgFlecha)
 
-        btncmAcceder.setOnClickListener(){
-            startActivity(Intent(this,crearCuenta::class.java))
+        btncmAcceder.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
         }
 
         txtcrear.setOnClickListener(){
