@@ -1,53 +1,87 @@
-Base de datos(pegarla aquí)
+Base de Datos del Proyecto
 
-
-Create table tbTipo_Enfermedad(
-UUId_Enfermedad number Primary key,
-Nombre_Enfermedad varchar2 (20)
-)
+Create table tbTipo_Enfermedad( 
+UUId_Enfermedad varchar2(64) Primary key,
+Nombre_Enfermedad varchar2 (20) )
 
 Create table tbPaciente(
-UUID_PACIENTE number Primary key,
-Nombres_Paciente varchar2 (40),
-Apellidos_Paciente varchar2 (40),
-Edad number
-)
+UUID_PACIENTE varchar2(64) Primary key, 
+Nombres_Paciente varchar2 (40), 
+Apellidos_Paciente varchar2 (40), 
+Edad number )
 
-Create table tbNumCamas(
-UUID_NUMEROCAMA number Primary key,
-NumeroCama number
-)
+Create table tbNumCamas( 
+UUID_NUMEROCAMA varchar2(64) Primary key, 
+NumeroCama number )
 
-Create table tbHabitaciones(
-UUID_numHabitaciones number primary key,
-numeroHabitacion number
-)
+Create table tbHabitaciones( 
+UUID_numHabitaciones varchar2(64) primary key, 
+numeroHabitacion number )
 
-Create table tbMedicamentos(
-UUID_MEDICAMENTOS number Primary key,
-Nombre_Medicamento varchar2(30)
-)
+Create table tbMedicamentos( 
+UUID_MEDICAMENTOS varchar2(64) Primary key,
+Nombre_Medicamento varchar2(30) )
 
-Create table tbDetallesPacientes(
-Hora_Aplicacion_Medicamento number,
-UUID_MEDICAMENTOS number,
-UUID_numHabitaciones number,
-UUId_Enfermedad number,
-UUID_PACIENTE number,
-UUID_NUMEROCAMA number,
-Constraint fK_UUID_NUMEROCAMA
+Create table tbDetallesPacientes( 
+Hora_Aplicacion_Medicamento varchar2(30), 
+UUID_MEDICAMENTOS varchar2(64), 
+UUID_numHabitaciones varchar2(64), 
+UUId_Enfermedad varchar2(64),
+UUID_PACIENTE varchar2(64),
+UUID_NUMEROCAMA varchar2(64), 
+Constraint fK_UUID_NUMEROCAMA 
 FOREIGN KEY (UUID_NUMEROCAMA)
-REFERENCES tbNumCamas (UUID_NUMEROCAMA),
-CONSTRAINT Fk_UUId_Enfermedad
-FOREIGN KEY (UUId_Enfermedad)
+REFERENCES tbNumCamas (UUID_NUMEROCAMA), 
+CONSTRAINT Fk_UUId_Enfermedad 
+FOREIGN KEY (UUId_Enfermedad) 
 References tbTipo_Enfermedad (UUId_Enfermedad),
-Constraint Fk_UUID_MEDICAMENTOS
+Constraint Fk_UUID_MEDICAMENTOS 
 FOREIGN KEY (UUID_MEDICAMENTOS)
 REFERENCES tbMedicamentos (UUID_MEDICAMENTOS),
-Constraint Fk_UUID_numHabitaciones
+Constraint Fk_UUID_numHabitaciones 
 FOREIGN KEY (UUID_numHabitaciones)
-References tbHabitaciones (UUID_numHabitaciones),
-Constraint  Fk_UUID_PACIENTE
+References tbHabitaciones (UUID_numHabitaciones), 
+Constraint Fk_UUID_PACIENTE
 FOREIGN KEY (UUID_PACIENTE)
 REFERENCES tbPaciente (UUID_PACIENTE)
 )
+
+Insert all 
+into tbTipo_Enfermedad (UUId_Enfermedad, Nombre_Enfermedad) values ('1','Dengue')
+into tbTipo_Enfermedad (UUId_Enfermedad, Nombre_Enfermedad) values ('2','Gripe')
+into tbTipo_Enfermedad (UUId_Enfermedad, Nombre_Enfermedad) values ('3','Calentura')
+into tbTipo_Enfermedad (UUId_Enfermedad, Nombre_Enfermedad) values ('5','Diabetes')
+into tbTipo_Enfermedad (UUId_Enfermedad, Nombre_Enfermedad) values ('4','Migraña')
+select * from dual;
+
+Insert all 
+into tbPaciente (UUID_PACIENTE, Nombres_Paciente, Apellidos_Paciente, Edad) values ('1','Juan', 'Dominguez',18 )
+into tbPaciente (UUID_PACIENTE, Nombres_Paciente, Apellidos_Paciente, Edad) values ('2','Marlon', 'Guzman', 25)
+into tbPaciente (UUID_PACIENTE, Nombres_Paciente, Apellidos_Paciente, Edad) values ('3','Bryan', 'Cornejo', 20)
+into tbPaciente (UUID_PACIENTE, Nombres_Paciente, Apellidos_Paciente, Edad) values ('5','Abigail', 'Morales', 27)
+into tbPaciente (UUID_PACIENTE, Nombres_Paciente, Apellidos_Paciente,Edad) values ('4','Gerson', 'Navarro',30)
+select * from dual;
+
+Insert all 
+into tbNumCamas (UUID_NUMEROCAMA, NumeroCama) values ('1', 12)
+into tbNumCamas (UUID_NUMEROCAMA, NumeroCama) values ('2', 3)
+into tbNumCamas (UUID_NUMEROCAMA, NumeroCama) values ('3', 2)
+into tbNumCamas (UUID_NUMEROCAMA, NumeroCama) values ('4', 25)
+into tbNumCamas (UUID_NUMEROCAMA, NumeroCama) values ('5', 14)
+select * from dual;
+
+Insert all 
+into tbHabitaciones (UUID_numHabitaciones, numeroHabitacion) values ('1', 1)
+into tbHabitaciones (UUID_numHabitaciones, numeroHabitacion) values ('2', 2)
+into tbHabitaciones (UUID_numHabitaciones, numeroHabitacion) values ('3', 3)
+into tbHabitaciones (UUID_numHabitaciones, numeroHabitacion) values ('4', 4)
+into tbHabitaciones (UUID_numHabitaciones, numeroHabitacion) values ('5', 5)
+select * from dual;
+
+Insert all 
+into tbMedicamentos (UUID_MEDICAMENTOS, Nombre_Medicamento) values ('1', 'Acetaminofen')
+into tbMedicamentos (UUID_MEDICAMENTOS, Nombre_Medicamento) values ('2', 'Ibuprofeno')
+into tbMedicamentos (UUID_MEDICAMENTOS, Nombre_Medicamento) values ('3', 'Naproxceno')
+into tbMedicamentos (UUID_MEDICAMENTOS, Nombre_Medicamento) values ('4', 'Suero')
+into tbMedicamentos (UUID_MEDICAMENTOS, Nombre_Medicamento) values ('5', 'Simeticona')
+select * from dual;
