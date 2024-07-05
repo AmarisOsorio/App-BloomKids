@@ -23,20 +23,20 @@ class bienvenida : AppCompatActivity() {
         }
 
         val btncmAcceder = findViewById<Button>(R.id.btn_cmAcceder)
-        val txtcrear = findViewById<TextView>(R.id.txtcmCrearCuenta)
-        val imgcrearcuenta = findViewById<ImageView>(R.id.imgFlecha)
+        //val txtcrear = findViewById<TextView>(R.id.txtcmCrearCuenta)
+        //val imgcrearcuenta = findViewById<ImageView>(R.id.imgFlecha)
 
         btncmAcceder.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         }
 
-        txtcrear.setOnClickListener(){
+        /*txtcrear.setOnClickListener(){
             startActivity(Intent(this,registro::class.java))
         }
 
         imgcrearcuenta.setOnClickListener(){
             startActivity(Intent(this,registro::class.java))
-        }
+        }*/
     }
 }

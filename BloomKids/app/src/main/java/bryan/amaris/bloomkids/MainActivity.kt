@@ -29,8 +29,6 @@ class MainActivity : AppCompatActivity() {
                 R.id.enfermedades, R.id.pacientes, R.id.habitacion,R.id.medicamentos2
             )
         )
-        setupActionBarWithNavController(navController, appBarConfiguration)
-        navView.setupWithNavController(navController)
 
     }
 }
