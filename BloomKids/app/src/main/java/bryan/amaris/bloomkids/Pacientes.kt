@@ -37,6 +37,8 @@ class Pacientes : Fragment() {
         val root =  inflater.inflate(R.layout.fragment_pacientes, container, false)
 
 
+
+
         return root
     }
 
