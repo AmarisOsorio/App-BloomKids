@@ -15,6 +15,9 @@
     <color name="color4">#3841CD</color>
     <color name="color5">#969696</color>
 
-
+    <color name="colorHB1">#D8B5FF</color>
+    <color name="colorHB2">#1EAE98</color>
+    <color name="colorHBO1">#59D8B5FF</color>
+    <color name="colorHBO2">#591EAE98</color>
 
 </resources>

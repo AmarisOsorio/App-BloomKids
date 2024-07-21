@@ -26,7 +26,7 @@ class MainActivity : AppCompatActivity() {
         // menu should be considered as top level destinations.
         val appBarConfiguration = AppBarConfiguration(
             setOf(
-                R.id.enfermedades, R.id.pacientes, R.id.habitacion,R.id.medicamentos2
+                R.id.pacientes
             )
         )
 

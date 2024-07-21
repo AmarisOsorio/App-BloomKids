@@ -3,25 +3,16 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@id/enfermedades">
-    <fragment
-        android:id="@+id/enfermedades"
-        android:name="bryan.amaris.bloomkids.enfermedades"
-        android:label="fragment_enfermedades"
-        tools:layout="@layout/fragment_enfermedades" />
-    <fragment
-        android:id="@+id/habitacion"
-        android:name="bryan.amaris.bloomkids.habitacion"
-        android:label="fragment_habitacion"
-        tools:layout="@layout/fragment_habitacion" />
+    app:startDestination="@id/pacientes">
     <fragment
         android:id="@+id/pacientes"
         android:name="bryan.amaris.bloomkids.Pacientes"
         android:label="fragment_pacientes"
         tools:layout="@layout/fragment_pacientes" />
+
     <fragment
-        android:id="@+id/medicamentos2"
-        android:name="bryan.amaris.bloomkids.Medicamentos"
-        android:label="fragment_medicamentos"
-        tools:layout="@layout/fragment_medicamentos" />
+        android:id="@+id/DetallesPaciente"
+        android:name="bryan.amaris.bloomkids.DetallesPaciente"
+        android:label="fragment_pacientes"
+        tools:layout="@layout/fragment_detalles_paciente" />
 </navigation>
