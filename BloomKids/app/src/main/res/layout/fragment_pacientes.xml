@@ -11,13 +11,14 @@
     <EditText
         android:id="@+id/txtEdadPaciente"
         android:layout_width="329dp"
-        android:layout_height="42dp"
+        android:layout_height="48dp"
         android:background="@drawable/burbuja2"
         android:ems="10"
         android:fontFamily="@font/jost"
+        android:hint="..."
         android:inputType="text"
         android:textColor="@color/black"
-        android:textColorHint="#737373"
+        android:textColorHint="@color/white"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -30,11 +31,10 @@
         android:layout_width="144dp"
         android:layout_height="21dp"
         android:background="@color/white"
-        android:backgroundTint="@color/white"
         android:fontFamily="@font/jost"
         android:text="Edad"
         android:textAlignment="center"
-        android:textColor="@color/color5"
+        android:textColor="@color/black"
         android:textSize="15sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -46,13 +46,12 @@
     <EditText
         android:id="@+id/txtApellidoPaciente"
         android:layout_width="329dp"
-        android:layout_height="42dp"
+        android:layout_height="48dp"
         android:background="@drawable/burbuja2"
         android:ems="10"
         android:fontFamily="@font/jost"
         android:inputType="text"
         android:textColor="@color/black"
-        android:textColorHint="#737373"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -65,11 +64,10 @@
         android:layout_width="144dp"
         android:layout_height="21dp"
         android:background="@color/white"
-        android:backgroundTint="@color/white"
         android:fontFamily="@font/jost"
-        android:text="Nombre del Paciente"
+        android:text="Apellido"
         android:textAlignment="center"
-        android:textColor="@color/color5"
+        android:textColor="@color/black"
         android:textSize="15sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -79,7 +77,7 @@
         app:layout_constraintVertical_bias="0.354" />
 
     <ImageView
-        android:id="@+id/imageView4"
+        android:id="@+id/imageViewB1"
         android:layout_width="86dp"
         android:layout_height="89dp"
         android:layout_marginStart="-50dp"
@@ -94,7 +92,7 @@
         app:layout_constraintVertical_bias="0.358" />
 
     <ImageView
-        android:id="@+id/imageView4"
+        android:id="@+id/imageViewB2"
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:layout_marginStart="-50dp"
@@ -109,7 +107,7 @@
         app:layout_constraintVertical_bias="0.535" />
 
     <ImageView
-        android:id="@+id/imageView4"
+        android:id="@+id/imageViewB3"
         android:layout_width="15dp"
         android:layout_height="15dp"
         android:layout_marginStart="-50dp"
@@ -124,7 +122,7 @@
         app:layout_constraintVertical_bias="0.514" />
 
     <ImageView
-        android:id="@+id/imageView4"
+        android:id="@+id/imageViewB4"
         android:layout_width="15dp"
         android:layout_height="15dp"
         android:layout_marginStart="-50dp"
@@ -139,7 +137,7 @@
         app:layout_constraintVertical_bias="0.092" />
 
     <ImageView
-        android:id="@+id/imageView4"
+        android:id="@+id/imageViewB13"
         android:layout_width="15dp"
         android:layout_height="15dp"
         android:layout_marginStart="-50dp"
@@ -154,7 +152,7 @@
         app:layout_constraintVertical_bias="0.24" />
 
     <ImageView
-        android:id="@+id/imageView4"
+        android:id="@+id/imageViewB5"
         android:layout_width="15dp"
         android:layout_height="15dp"
         android:layout_marginStart="-50dp"
@@ -169,7 +167,7 @@
         app:layout_constraintVertical_bias="0.584" />
 
     <ImageView
-        android:id="@+id/imageView4"
+        android:id="@+id/imageViewB6"
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:layout_marginStart="-50dp"
@@ -184,7 +182,7 @@
         app:layout_constraintVertical_bias="0.352" />
 
     <ImageView
-        android:id="@+id/imageView4"
+        android:id="@+id/imageViewB7"
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:layout_marginStart="-50dp"
@@ -199,7 +197,7 @@
         app:layout_constraintVertical_bias="0.141" />
 
     <ImageView
-        android:id="@+id/imageView4"
+        android:id="@+id/imageViewB8"
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:layout_marginStart="-50dp"
@@ -214,7 +212,7 @@
         app:layout_constraintVertical_bias="0.225" />
 
     <ImageView
-        android:id="@+id/imageView4"
+        android:id="@+id/imageViewB9"
         android:layout_width="87dp"
         android:layout_height="86dp"
         android:layout_marginStart="-50dp"
@@ -229,7 +227,7 @@
         app:layout_constraintVertical_bias="0.609" />
 
     <ImageView
-        android:id="@+id/imageView4"
+        android:id="@+id/imageViewB10"
         android:layout_width="86dp"
         android:layout_height="89dp"
         android:layout_marginStart="-50dp"
@@ -244,7 +242,7 @@
         app:layout_constraintVertical_bias="0.096" />
 
     <ImageView
-        android:id="@+id/imageView4"
+        android:id="@+id/imageViewB11"
         android:layout_width="86dp"
         android:layout_height="89dp"
         android:layout_marginStart="-50dp"
@@ -258,7 +256,7 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/textViewB12"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/bubblegum_sans"
@@ -273,14 +271,13 @@
 
     <EditText
         android:id="@+id/txtNombrePaciente"
-        android:layout_width="329dp"
-        android:layout_height="42dp"
+        android:layout_width="322dp"
+        android:layout_height="48dp"
         android:background="@drawable/burbuja2"
         android:ems="10"
         android:fontFamily="@font/jost"
         android:inputType="text"
         android:textColor="@color/black"
-        android:textColorHint="#737373"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -306,9 +303,9 @@
         android:background="@color/white"
         android:backgroundTint="@color/white"
         android:fontFamily="@font/jost"
-        android:text="Nombre del Paciente"
+        android:text="Nombre"
         android:textAlignment="center"
-        android:textColor="@color/color5"
+        android:textColor="@color/black"
         android:textSize="15sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
