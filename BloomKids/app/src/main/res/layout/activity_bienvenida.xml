@@ -5,13 +5,13 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/img_fondo1"
+    android:background="@drawable/imgfondo2"
     tools:context=".bienvenida">
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="406dp"
-        android:layout_height="1261dp"
+        android:layout_width="413dp"
+        android:layout_height="1169dp"
         android:layout_marginTop="1dp"
         android:layout_marginBottom="1dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -19,7 +19,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
+        app:layout_constraintVertical_bias="0.997"
         app:srcCompat="@drawable/cuadrito_fondo" />
 
     <ImageView
@@ -36,13 +36,13 @@
         android:id="@+id/textView4"
         android:layout_width="293dp"
         android:layout_height="109dp"
-        android:layout_marginTop="888dp"
+        android:layout_marginTop="804dp"
         android:fontFamily="@font/baloo"
         android:text="Dedicados al mejor cuidado"
         android:textColor="@color/white"
         android:textSize="36sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.33"
+        app:layout_constraintHorizontal_bias="0.322"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/imageView" />
 
@@ -50,7 +50,7 @@
         android:id="@+id/textView6"
         android:layout_width="333dp"
         android:layout_height="51dp"
-        android:layout_marginBottom="164dp"
+        android:layout_marginBottom="152dp"
         android:fontFamily="@font/jost"
         android:text="Bienvenido a BloomKids, dedicados el mejor cuidado para los pequeños héroes"
         android:textColor="#969696"
@@ -62,38 +62,14 @@
     <Button
         android:id="@+id/btn_cmAcceder"
         android:layout_width="334dp"
-        android:layout_height="46dp"
-        android:layout_marginBottom="108dp"
-        android:backgroundTint="@color/color4"
+        android:layout_height="50dp"
+        android:layout_marginBottom="80dp"
+        android:backgroundTint="@color/colorHB2"
         android:fontFamily="@font/baloo"
         android:text="Acceder"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.506"
+        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/txtcmCrearCuenta"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="56dp"
-        android:backgroundTint="@color/black"
-        android:text="O crea una cuenta"
-        android:textColor="@color/color2"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.732"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <ImageView
-        android:id="@+id/imgFlecha"
-        android:layout_width="35dp"
-        android:layout_height="29dp"
-        android:layout_marginBottom="48dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.88"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/ic_arrow1" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

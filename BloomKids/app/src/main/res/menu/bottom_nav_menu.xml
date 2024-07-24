@@ -2,24 +2,13 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/enfermedades"
+        android:id="@+id/DetallesPaciente"
         android:icon="@drawable/icondctorb"
-        android:title="Enfermedades" />
+        android:title="Detalles Pacientes" />
 
     <item
         android:id="@+id/pacientes"
         android:icon="@drawable/iclistadob"
         android:title="Pacientes" />
-
-    <item
-        android:id="@+id/medicamentos"
-        android:icon="@drawable/icbotiquinb"
-        android:title="Botíquin" />
-
-    <item
-        android:id="@+id/habitacion"
-        android:icon="@drawable/icbotiquinb"
-        android:title="Habitaciones" />
-
 
 </menu>
