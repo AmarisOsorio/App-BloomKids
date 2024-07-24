@@ -1,0 +1,4 @@
+package DetallesPacienteHelper
+
+class ViewHolderDetallesPacientes {
+}

@@ -72,7 +72,7 @@ class PacientesAdaptador(private var Datos: List<Pacientes>) : RecyclerView.Adap
             builder.setTitle("¿Estas seguro?")
 
             //Ponerle un mensaje
-            builder.setMessage("¿Desea eliminar el registro?")
+            builder.setMessage("¿Desea eliminar el Paciente?")
 
             //Paso final, agregamos los botones
             builder.setPositiveButton("SI") { dialog, wich ->
