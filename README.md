@@ -1,6 +1,6 @@
 Base de datos terminada 
 
-'''Sql Developer 
+```Sql Developer 
 
 
 Create table tbEnfermedad( 
@@ -89,4 +89,4 @@ into tbMedicamentos (UUID_MEDICAMENTOS, Nombre_Medicamento) values ('4', 'Suero'
 into tbMedicamentos (UUID_MEDICAMENTOS, Nombre_Medicamento) values ('5', 'Simeticona') 
 select * from dual;
 
-'''
+```
