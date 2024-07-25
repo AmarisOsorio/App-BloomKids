@@ -12,12 +12,14 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
+import android.widget.Button
 import android.widget.EditText
 import android.widget.Spinner
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
+import java.util.UUID
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -54,6 +56,7 @@ class DetallesPaciente : Fragment() {
         val spHabitacion = root.findViewById<Spinner>(R.id.spHabitacion)
         val spCama = root.findViewById<Spinner>(R.id.spCama)
         val txtHoraAplicacion = root.findViewById<EditText>(R.id.txtHoraAplicacion)
+        val btnGuardarDetalles= root.findViewById<Button>(R.id.btnGuardarDetalles)
 
 
         //Funcion para hacer el select de los nombres de los doctores que voy a mostrar en el Spinner
@@ -212,6 +215,29 @@ class DetallesPaciente : Fragment() {
                 spEnfermedades.adapter = miAdaptador
             }
         }
+        btnGuardarDetalles.setOnClickListener{
+            CoroutineScope(Dispatchers.IO).launch {
+                val objConexion = Conexion().cadenaConexio()
+
+                val paciente = obtenerPacientes()
+                val medicamentos= obtenerMedicamentos()
+                val enfermedad = obtenerEnfermedades()
+                val habitacion = obtenerHabitaciones()
+                val cama = obtenerCamas()
+
+                //2- Creo una variable que contenga un PrepareStatement
+                val addPaciente = objConexion?.prepareStatement("insert into tbDetallesPaciente(UUID_Detalles, UUID_PACIENTE, UUID_MEDICAMENTOS, UUId_Enfermedad, UUID_numHabitaciones, UUID_NUMEROCAMA, Hora_Aplicacion_Medicamento) values(?, ?, ?, ?, ?, ?, ?)")!!
+                addPaciente.setString(1, UUID.randomUUID().toString())
+                addPaciente.setString(2, paciente[spPaciente.selectedItemPosition].UUID_PACIENTE)
+                addPaciente.setString(3, medicamentos[spMedicamento.selectedItemPosition].UUID_MEDICAMENTOS)
+                addPaciente.setString(4, enfermedad[spEnfermedades.selectedItemPosition].UUId_Enfermedad)
+                addPaciente.setString(5, habitacion[spHabitacion.selectedItemPosition].UUID_numHabitaciones)
+                addPaciente.setString(6, cama[spCama.selectedItemPosition].UUID_NUMEROCAMA)
+                addPaciente.setString(7,txtHoraAplicacion.text.toString())
+                addPaciente.executeUpdate()
+            }
+        }
+
         return root
 
 
