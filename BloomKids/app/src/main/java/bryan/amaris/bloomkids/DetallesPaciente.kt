@@ -6,6 +6,7 @@ import Modelo.tbCamas
 import Modelo.tbEnfermedades
 import Modelo.tbHabitaciones
 import Modelo.tbMedicamentos
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -21,26 +22,21 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import java.util.UUID
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
 
-/**
- * A simple [Fragment] subclass.
- * Use the [DetallesPaciente.newInstance] factory method to
- * create an instance of this fragment.
- */
 class DetallesPaciente : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
+
+    //////////TODO:Inicia el companion object/////////////
+    companion object variablesGlobales{
+        lateinit var nombrePaciente: String
+        /*lateinit var apellidoPaciente: String
+        lateinit var medicamentosPaciente: String
+        lateinit var horaAplicacion: String*/
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
+
         }
     }
 
@@ -57,6 +53,7 @@ class DetallesPaciente : Fragment() {
         val spCama = root.findViewById<Spinner>(R.id.spCama)
         val txtHoraAplicacion = root.findViewById<EditText>(R.id.txtHoraAplicacion)
         val btnGuardarDetalles= root.findViewById<Button>(R.id.btnGuardarDetalles)
+
 
 
         //Funcion para hacer el select de los nombres de los doctores que voy a mostrar en el Spinner
@@ -236,7 +233,14 @@ class DetallesPaciente : Fragment() {
                 addPaciente.setString(7,txtHoraAplicacion.text.toString())
                 addPaciente.executeUpdate()
             }
+
+            //TODO: Parte del companion object/////////
+            nombrePaciente = spPaciente.toString()
+            val intent = Intent(requireContext(), activity_datosPr::class.java)
+            startActivity(intent)
         }
+
+
 
         return root
 
@@ -244,16 +248,4 @@ class DetallesPaciente : Fragment() {
 
     }
 
-    companion object {
-
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            DetallesPaciente().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
-            }
-    }
 }
