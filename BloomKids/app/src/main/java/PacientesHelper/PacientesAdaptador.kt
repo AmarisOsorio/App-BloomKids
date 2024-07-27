@@ -23,7 +23,7 @@ class PacientesAdaptador(private var Datos: List<Pacientes>) : RecyclerView.Adap
         notifyItemChanged(index)
     }
 
-    fun eliminarRegistro(NombreRestaurante: String, posicion: Int){
+    fun eliminarRegistro(NombrePaciente: String, posicion: Int){
 
         //Quitar el elemento de la lista
         val listaDatos= Datos.toMutableList()
@@ -33,9 +33,9 @@ class PacientesAdaptador(private var Datos: List<Pacientes>) : RecyclerView.Adap
         GlobalScope.launch(Dispatchers.IO){
             //1-Crear un objeto de clase conexion
             val objConexion = Conexion().cadenaConexio()
-            val deleteRestaurante= objConexion?.prepareStatement("Delete tbPciente where Nombres_Paciente = ?")!!
-            deleteRestaurante.setString(1,NombreRestaurante)
-            deleteRestaurante.executeUpdate()
+            val deletePaciente= objConexion?.prepareStatement("Delete tbPaciente where Nombres_Paciente = ?")!!
+            deletePaciente.setString(1,NombrePaciente)
+            deletePaciente.executeUpdate()
 
 
             val commit = objConexion.prepareStatement("commit")!!

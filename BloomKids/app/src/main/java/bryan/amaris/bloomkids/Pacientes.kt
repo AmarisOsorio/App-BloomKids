@@ -47,7 +47,7 @@ class Pacientes : Fragment() {
             val objConexion = Conexion().cadenaConexio()
 
             val statement = objConexion?.createStatement()
-            val resulSet = statement?.executeQuery("select * from tbPacientes")!!
+            val resulSet = statement?.executeQuery("select * from tbPaciente")!!
             val Paciente = mutableListOf<Pacientes>()
             while (resulSet?.next() == true) {
                 val UUID_PACIENTE = resulSet.getString("UUID_PACIENTE")
@@ -55,15 +55,15 @@ class Pacientes : Fragment() {
                 val Apellidos_Paciente = resulSet.getString("Apellidos_Paciente")
                 val Edad = resulSet.getInt("Edad")
 
-                val Restaurantecard = Modelo.Pacientes(UUID_PACIENTE, Nombres_Paciente, Apellidos_Paciente, Edad)
-                Paciente.add(Restaurantecard)
+                val pacienteCard = Modelo.Pacientes(UUID_PACIENTE, Nombres_Paciente, Apellidos_Paciente, Edad)
+                Paciente.add(pacienteCard)
             }
             return Paciente
         }
         CoroutineScope(Dispatchers.IO).launch {
-            val RestaurantesDB = obtenerDatosPaciente()
+            val PacientesDB = obtenerDatosPaciente()
             withContext(Dispatchers.Main){
-                val miAdapter = PacientesAdaptador(RestaurantesDB)
+                val miAdapter = PacientesAdaptador(PacientesDB)
                 rcvPacientes.adapter = miAdapter
             }
         }
